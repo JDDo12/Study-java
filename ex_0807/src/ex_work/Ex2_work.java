@@ -19,11 +19,19 @@ public class Ex2_work {
         //.....
         //5 * 9 = 45
 
-        System.out.println("2 ~ 9 사이의 값을 입력하세요");
+        System.out.print("단 : ");
         int dan = sc.nextInt();
 
-        for( int i = 1; i <= 9; i++){
-            System.out.println(dan + "*" + i + "=" +(dan * i));
+        if ( dan <= 1 || dan >= 10 ) {
+            System.out.println("2 ~ 9 사이의 값을 입력하세요");
+        } else{
+            for( int i = 1; i <= 9; i++ ){
+
+                //System.out.println(dan + " * " + i + " = " + (dan * i));
+
+                System.out.printf("%d * %d = %02d\n", dan, i, (dan * i));
+
+            }//for
         }
 
     }//main
