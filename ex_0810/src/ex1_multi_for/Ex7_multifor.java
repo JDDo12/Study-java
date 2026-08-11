@@ -12,7 +12,7 @@ public class Ex7_multifor {
 
             for( int j = 2; j <= 9; j++ ){
 
-                System.out.printf("%d x %d = %d ", j, i, (j*i));
+                System.out.printf("%d x %d = %d\t", j, i, (j*i));
                 
             }//in
 
