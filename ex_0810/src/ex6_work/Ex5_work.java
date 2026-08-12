@@ -9,7 +9,7 @@ public class Ex5_work {
         // -----------------------
         // 수1 : 6
         // 수2 : 10
-        // 최대공배수 : 30
+        // 최소공배수 : 30
 
         Scanner sc = new Scanner(System.in);
 
@@ -39,6 +39,28 @@ public class Ex5_work {
         } // out
 
         System.out.println("최소공배수 : " + min);
+
+        System.out.println("------------------------------");
+
+        //유클리드 호제법 최소공배수
+        
+        int x = su1;
+        int y= su2;
+
+
+        while( y != 0 ){
+
+            int tmp = x % y;
+            x = y;
+            y = tmp;
+
+        }//while
+
+        int gcd = x;//최대공약수
+        
+        //최소공배수
+        int lcm = (su1 * su2) / gcd;
+        System.out.println("최소공배수 : " + lcm);
 
     }// main
 }
