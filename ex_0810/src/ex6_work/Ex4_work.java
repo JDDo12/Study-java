@@ -22,17 +22,21 @@ public class Ex4_work {
         System.out.print("수2 : ");
         int su2 = sc.nextInt();
 
+        int max = 0;
+
         for (int i = 1; i <= su1; i++) {
 
             for (int j = 1; j <= su2; j++) {
 
-                if (i % su1 == 1 || j % su2 == 1);
+                if (su1 % i == 0 && su2 % j == 0 && i == j){
+                    max =i;
+                }
 
             } // in
 
         } // out
 
-        System.out.print("최대공약수 : " + su1 % su2);
+        System.out.print("최대공약수 : " + max);
 
     }// main
 }
