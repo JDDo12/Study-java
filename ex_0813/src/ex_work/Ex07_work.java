@@ -17,6 +17,9 @@ public class Ex07_work {
         int n = sc.nextInt();
 
         int[][] arr = new int[n][n];
+        int n1 = 0;
+        int n2 = 0;
+        int n3 = 0;
 
         for (int i = 0; i < arr.length; i++) {
 
