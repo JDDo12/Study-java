@@ -40,7 +40,7 @@ public class Ex09_work {
             
             System.out.print(base[i] + "");
             i++;
-
+            
         }//out
         
 
