@@ -22,17 +22,28 @@ public class Ex2_work {
         Scanner sc = new Scanner(System.in);
         System.out.print("검색 : ");
         String str = sc.next();
-        
+
+        boolean find = false;
 
         for( int i = 0; i < actor.length; i++ ){
 
-            for( int j = 0; j < actor[i].length; j++ ){
-                    
-                    System.out.println(actor[i][j]);
-                }//in
-                    
+            if( str.equals(actor[i][0]) ){
+
+                System.out.println("[" + actor[i][0] + "]");
                 
-            }//out
+                for( int j = 1; j < actor[i].length; j++ ){
+                    System.out.println(actor[i][j]);
+            }//in
+                    
+            find = true;
+
+            }//if
+
+        }//out
+
+        if( find == false ){
+            System.out.println("해당 배우의 정보가 없습니다");
+        }
 
     }//main
 }
