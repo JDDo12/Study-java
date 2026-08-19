@@ -1,17 +1,9 @@
-package ex_work;
+package ex4_work;
 
 import java.util.Scanner;
 
-public class Ex1_work {
+public class Word {
     public static void main(String[] args) {
-
-        // 키보드에서 입력받은 값이 회문인지 판단
-        // --------------------------------
-        // 입력 : 스윙스
-        // 스윙스은(는) 회문입니다
-
-        // 입력 : 스윙칩
-        // 스윙칩은(는) 회문이 아닙니다
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,16 +12,19 @@ public class Ex1_work {
         // 원본
         String str = sc.next();
 
-        StringBuffer sb = new StringBuffer( str );
+        // StringBuffer sb = new StringBuffer(str);
 
         // 원본을 뒤집어서 저장할 객체
-        String rev = sb.reverse().toString();
+        // String rev = "";
 
         // for( int i = str.length()-1; i >= 0; i-- ){
 
         // rev += str.charAt(i);
 
         // }//for
+
+        CheckWord cw = new CheckWord();
+        String rev = cw.check( str );
 
         if (str.equals(rev)) {
             System.out.println(str + "은(는) 회문");
