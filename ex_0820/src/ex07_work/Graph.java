@@ -12,24 +12,38 @@ public class Graph {
         // 1의 개수 : ####### 7
         //  ....
         // 9의 개수 : ########## 10
-        
-        int num = new Random().nextInt(9) + 0;
-        
-        int[] gp = new int[0];
-        int[] gop = new int[99];
-        char ch = '#';
-        int cnt = 0;
-        
-        for( int i = 0; i < gp.length; i++ ){
-            
-            for( int j = 0; j < num; j++ ){
+    
+        // Random r = new Random();
 
-                
+        // int[] count = new int[10];
 
-            }//in
-            
-        }//out
-        
+        // for( int i = 0; i < 100; i++ ){
+
+        //     int num = r.nextInt(10);
+
+        //     count[num]++;
+
+        // }//for
+
+        // for( int i = 0; i < 10; i++ ){
+
+        //     System.out.print(i + "의 갯수 : ");
+
+        //     for( int j = 0; j < count[i]; j++ ){
+
+        //         System.out.print("#");
+
+        //     }//in
+
+        //     System.out.println(" " + count[i]);
+
+        // }//out
+
+        GraphSub rn = new GraphSub();
+
+        rn.makeRandom();
+
+        rn.printGraph();
 
     }//main
 }
