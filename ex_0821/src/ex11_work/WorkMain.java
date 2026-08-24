@@ -12,45 +12,30 @@ public class WorkMain {
         // >> apple
         // >> apple 정답!!
 
+        WorkSub ws = new WorkSub();
+        // 정답단어
+        String answer = ws.getAnswer();
+
+        // 정답을 섞어서 문제로 만들기
+        String question = ws.scrambleWord(answer);
+
         Scanner sc = new Scanner(System.in);
-        Random random = new Random();
 
-        String[] strArr = { "APPLE", "ORANGE", "HOPE", "VIEW" };
+        System.out.println("문제 : " + question);
 
-        // 배열에서 랜덤으로 하나 선택
-        int num = random.nextInt(strArr.length);
-        String answer = strArr[num];
-
-        // 글자를 섞기 위해 char 배열로 변환
-        char[] arr = answer.toCharArray();
-
-        // 글자 섞기
-        for (int i = 0; i < arr.length; i++) {
-
-            int a = random.nextInt(arr.length);
-            int b = random.nextInt(arr.length);
-
-            char temp = arr[a];
-            arr[a] = arr[b];
-            arr[b] = temp;
-        }
-
-        String quiz = new String(arr);
-
-        System.out.println("문제 : " + quiz);
-
-        // 정답 입력
         while (true) {
-            System.out.print(">> ");
-            String input = sc.nextLine();
 
-            if (input.equalsIgnoreCase(answer)) {
-                System.out.println(input + " 정답!!");
+            System.out.print(">> ");
+            String str = sc.next();
+
+            if (str.equalsIgnoreCase(answer)) {
+                System.out.println(str + "은(는) 정답입니다.");
                 break;
             } else {
-                System.out.println(input + " 오답");
+                System.out.println(str + "은(는) 오답입니다.");
             }
-        }
+
+        } // while
 
     }// main
 }
