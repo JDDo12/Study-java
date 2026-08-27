@@ -1,5 +1,9 @@
 package ex6_work;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Ex5_work {
     public static void main(String[] args) {
 
@@ -24,6 +28,28 @@ public class Ex5_work {
          * 
          * 지수가 없습니다.
          */
+
+        Scanner sc = new Scanner(System.in);
+        List<String> list = new ArrayList<String>();
+
+
+
+        while (list.size() < 3) {
+        
+            System.out.print("이름 입력 : ");
+            String name = sc.next();
+            list.add(name);
+            
+        }//while
+
+        System.out.print("검색할 이름 : ");
+        String find = sc.next();
+
+        if( list.contains(find) ){
+            System.out.printf("%s가 있습니다\n", find);
+        } else {
+            System.out.printf("%s가 없습니다\n", find);
+        }
 
     }// main
 }
