@@ -16,7 +16,7 @@ public class WorkMain {
         Scanner sc = new Scanner(System.in);
         String path = "C:/myFile/work3.txt";
         File f = new File(path);
-        byte[] console = new byte[(int)f.length()];
+        byte[] read = new byte[(int)f.length()];
         FileInputStream fis = null;
         
         System.out.print("입력 : ");
@@ -28,8 +28,8 @@ public class WorkMain {
             
             fis = new FileInputStream(f);
 
-            fis.read(console);
-            str = new String(console).trim();
+            fis.read(read);
+            str = new String(read).trim();
 
             for( int i = 0; i < str.length(); i++ ){
 
