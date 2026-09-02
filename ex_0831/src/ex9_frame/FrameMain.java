@@ -18,7 +18,7 @@ public class FrameMain {
         f.setLayout(null);
         f.setBounds(900, 200, 350, 500);
 
-        Font font = new Font("맑은 고딕", Font.BOLD, 20);
+        Font font = new Font("맑은 고딕", Font.BOLD, 30);
 
         Button num0 = new Button("0");
         Button num1 = new Button("1");
@@ -56,6 +56,7 @@ public class FrameMain {
 
         TextField tf = new TextField();
         tf.setBounds(20, 30, 300, 50);
+        tf.setFont(font);
 
         ActionListener al = new ActionListener() {
             @Override
@@ -66,27 +67,48 @@ public class FrameMain {
                     case "+":
                         su1 = Integer.parseInt(tf.getText());
                         op = "+";
+                        tf.setText(tf.getText() + "+");
                         break;
                     case "-":
-
+                        su1 = Integer.parseInt(tf.getText());
+                        op = "-";
+                        tf.setText(tf.getText() + "-");
                         break;
                     case "*":
-
+                        su1 = Integer.parseInt(tf.getText());
+                        op = "*";
+                        tf.setText(tf.getText() + "*");
                         break;
                     case "/":
-
+                        su1 = Integer.parseInt(tf.getText());
+                        op = "/";
+                        tf.setText(tf.getText() + "/");
                         break;
                     case "=":
                         int index = tf.getText().indexOf(op);
                         su2 = Integer.parseInt(tf.getText().substring(index + 1));
+                        int result = 0;
                         switch(op){
                             case "+": 
-                            tf.setText(String.valueOf(su1 + su2));
-                            break;
+                                result = su1 + su2;
+                                break;
+                            case "-":
+                                result = su1 - su2;
+                                break;
+                            case "*":
+                                result = su1 * su2;
+                                break;
+                            case "/":
+                                result = (int) ((float) su1 / (float) su2);
+                                break;
                         }//switch
+                        tf.setText(String.valueOf(result));
                         break;
                     case "c":
-
+                        tf.setText("");
+                        su1 = 0;
+                        su2 = 0;
+                        op = "";
                         break;
                     default:
                         tf.setText(tf.getText() + e.getActionCommand());
